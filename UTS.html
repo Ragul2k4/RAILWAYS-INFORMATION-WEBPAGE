@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR Unreserved Ticketing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="UTS.css">
+</head>
+<style>
+.ticket-summary {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+.ticket-summary h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ticket-summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.ticket-summary .fare {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+</style>
+<body>
+    
+    <div class="topnav"> <center>
+        <div><b>UTS</b></div>
+        <div><h3>IR Unreserved Ticketing</h3></div>
+    </center>
+        <button type="button" class="goback"><a href="index.html">Go Back</a></button>
+        </div>
+       
+    </div>
+    <div class="container mt-4">
+        <h2 class="text-danger">NORMAL BOOKING</h2>
+        <form>
+            <div class="form-group">
+                <label for="departStation">Depart Station</label>
+                <select class="form-control" id="departStation">
+                    <option>From</option>
+                    <option>SALEM JN.</option>
+                    <option>ADIRAMPATTINAM</option>
+                    <option>ALANDUR</option>
+                    <option>ARIYALUR</option>
+                    <option>CHENNAI EGMORE</option>
+                    <option>CHENNAI MAS</option>
+                    <option>CHENNAI PARK</option>
+                    <option>CHENNAI ROYAPURAM</option>
+                    <option>COIMBATORE JN.</option>
+                    <option>CUDDALORE</option>
+                    <option>DHARMAPURI</option>
+                    <option>ERODE</option>
+                    <option>GINGEE</option>
+                    <option>HOSUR</option>
+                    <option>KANCHIPURAM</option>
+                    <option>KARUR</option>
+                    <option>KATPADI</option>
+                    <option>KOVILPATTI</option>
+                    <option>METTUPALAYAM</option>
+                    <option>MADURAI JN.</option>
+                    <option>NAGAPATTINAM</option>
+                    <option>NAGERCOIL JN.</option>
+                    <option>PALAKKAD</option>
+                    <option>RAMANATHAPURAM</option>
+                    <option>RANIPET</option>
+                    <option>SANKARANKOVIL</option>
+                    <option>SELAM</option>
+                    <option>THANJAVUR</option>
+                    <option>THENI</option>
+                    <option>THIRUCHIRAPPALLI JN.</option>
+                    <option>THIRUNELVELI</option>
+                    <option>TRICHY FORT</option>
+                    <option>TRIVANDRUM CNTL</option>
+                    <option>THIRUVARUR</option>
+                    <option>VELLORE</option>
+                    <option>VILLUPURAM</option>
+                    <option>VIRUDHUNAGAR</option>
+                    <option>VILLUPURAM JN.</option>
+                    <option>WALAJAPET</option>
+                    <option>YERCAUD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destinationStation">Destination Station</label>
+                <select class="form-control" id="destinationStation">
+                    <option>To</option>
+                    <option>THIRUVARUR JN.</option>
+                    <option>ADIRAMPATTINAM</option>
+                    <option>ALANDUR</option>
+                    <option>ARIYALUR</option>
+                    <option>CHENNAI EGMORE</option>
+                    <option>CHENNAI MAS</option>
+                    <option>CHENNAI PARK</option>
+                    <option>CHENNAI ROYAPURAM</option>
+                    <option>COIMBATORE JN.</option>
+                    <option>CUDDALORE</option>
+                    <option>DHARMAPURI</option>
+                    <option>ERODE</option>
+                    <option>GINGEE</option>
+                    <option>HOSUR</option>
+                    <option>KANCHIPURAM</option>
+                    <option>KARUR</option>
+                    <option>KATPADI</option>
+                    <option>KOVILPATTI</option>
+                    <option>METTUPALAYAM</option>
+                    <option>MADURAI JN.</option>
+                    <option>NAGAPATTINAM</option>
+                    <option>NAGERCOIL JN.</option>
+                    <option>PALAKKAD</option>
+                    <option>RAMANATHAPURAM</option>
+                    <option>RANIPET</option>
+                    <option>SANKARANKOVIL</option>
+                    <option>SELAM</option>
+                    <option>THANJAVUR</option>
+                    <option>THENI</option>
+                    <option>THIRUCHIRAPPALLI JN.</option>
+                    <option>THIRUNELVELI</option>
+                    <option>TRICHY FORT</option>
+                    <option>TRIVANDRUM CNTL</option>
+                    <option>THIRUVARUR</option>
+                    <option>VELLORE</option>
+                    <option>VILLUPURAM</option>
+                    <option>VIRUDHUNAGAR</option>
+                    <option>VILLUPURAM JN.</option>
+                    <option>WALAJAPET</option>
+                    <option>YERCAUD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="adult">Adult</label>
+                <select class="form-control" id="adult">
+                    <option>ONE (1)</option>
+                    <option>TWO (2)</option>
+                    <option>THREE (3)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="child">Child</label>
+                <select class="form-control" id="child">
+                    <option>ZERO (0)</option>
+                    <option>ONE (1)</option>
+                    <option>TWO (2)</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ticketType">Ticket Type</label>
+                <select class="form-control" id="ticketType">
+                    <option>JOURNEY (J)</option>
+                    <option>RETURN (R)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="trainType">Train Type</label>
+                <select class="form-control" id="trainType">
+                    <option>MAIL/EXP (M/E)</option>
+                    <option>PASSENGER (P)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="classType">Class</label>
+                <select class="form-control" id="classType">
+                    <option>SECOND SITING</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="paymentType">Payment Type</label>
+                <select class="form-control" id="paymentType">
+                    <option>RWALLET</option>
+                    <option>UPI</option>
+                </select>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="concession">
+                <label class="form-check-label" for="concession">Avail concession</label>
+            </div>
+            <div class="form-group mt-3">
+                <label for="ticketPrice">Ticket Price</label>
+                <input type="text" class="form-control" id="ticketPrice" readonly>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="bookTicket()">BOOK TICKET</button>
+        </form>
+        <div id="ticketSummary" class="ticket-summary"></div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function calculateTicketPrice() {
+            // Sample pricing logic
+            const baseFare = 50; // Base fare for a ticket
+            const adultFare = 30; // Additional fare per adult
+            const childFare = 15; // Additional fare per child
+            const returnMultiplier = 2; // Multiplier for return tickets
+            const firstClassMultiplier = 1.5; // Multiplier for first class tickets
+            const concessionDiscount = 0.1; // 10% discount for concession
+
+            let fare = baseFare;
+            const adults = document.getElementById('adult').value === 'ONE (1)' ? 1 : 2;
+            const children = document.getElementById('child').value === 'ONE (1)' ? 1 : 0;
+            const isReturn = document.getElementById('ticketType').value === 'RETURN (R)';
+            const isFirstClass = document.getElementById('classType').value === 'FIRST (I)';
+            const hasConcession = document.getElementById('concession').checked;
+
+            fare += (adults * adultFare) + (children * childFare);
+
+            if (isReturn) {
+                fare *= returnMultiplier;
+            }
+
+            if (isFirstClass) {
+                fare *= firstClassMultiplier;
+            }
+
+            if (hasConcession) {
+                fare *= (1 - concessionDiscount);
+            }
+
+            document.getElementById('ticketPrice').value = `₹ ${fare.toFixed(2)}`;
+        }
+
+        function bookTicket() {
+            calculateTicketPrice();
+            const departStation = document.getElementById('departStation').value;
+            const destinationStation = document.getElementById('destinationStation').value;
+            const adults = document.getElementById('adult').value;
+            const children = document.getElementById('child').value;
+            const ticketType = document.getElementById('ticketType').value;
+            const trainType = document.getElementById('trainType').value;
+            const classType = document.getElementById('classType').value;
+            const fare = document.getElementById('ticketPrice').value;
+
+            const ticketSummaryHtml = `
+                <h3>TICKET SUMMARY</h3>
+                <div><span>Source Station</span><span>${departStation}</span></div>
+                <div><span>Destination Station</span><span>${destinationStation}</span></div>
+                <div><span>Via</span><span>KRR-TPJ-TJ</span></div>
+                <div><span>Adult</span><span>${adults === 'ONE (1)' ? '1' : '2'}</span></div>
+                <div><span>Child</span><span>${children === 'ZERO (0)' ? '0' : '1'}</span></div>
+                <div><span>Escort</span><span></span></div>
+                <div><span>Class Type</span><span>${classType}</span></div>
+                <div><span>Ticket Type</span><span>${ticketType}</span></div>
+                <div><span>Train Type</span><span>${trainType}</span></div>
+                <div class="fare">Total Fare: ${fare}</div>
+            `;
+
+            document.getElementById('ticketSummary').innerHTML = ticketSummaryHtml;
+        }
+    </script>
+</body>
+</html>
