@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background:linear-gradient(to left,#eb9a5d, #fafaf8);
+}
+
+.adult{
+    position:absolute;
+    left: 200px;;
+    top: 100px;
+    size: 20px;
+}
+
+.topnav{
+    padding:1%;
+    width: 1x;
+    background:linear-gradient(to left,#ff9100, #d9d92a);
+}
+.goback{
+    border: 0px;
+    padding: auto;
+    background: whitesmoke;
+    border-radius: 9px;
+    width:4em;
+    height: 2em;
+    position: absolute;
+    top: 33px;
+
+    
+
+}
