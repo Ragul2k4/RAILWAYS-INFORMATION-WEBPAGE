@@ -2,142 +2,11 @@
 <html>
 <head> 
    <style>
-        .login-box {
-            position: absolute;
-            top: 10px;
-            right: 100px;
-            background-color: #ff0000;
-            padding: 10px;
-            border: 1px solid #000000;
-            border-radius: 50px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the login button */
-        .login-button {
-            background-color: #007bff;
-            color: #000000;
-            border: none;
-            border-radius: 50px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .Signup-box {
-            position: absolute;
-            top:10px;
-            right: 0px;
-            background-color: #ff0000;
-            padding: 10px;
-            border: 1px solid #000000;
-            border-radius: 50px;
-            box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the signup button */
-        .Signup-button {
-            background-color: #007bff;
-            color: #000000;
-            border: none;
-            border-radius: 50px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .Book-box {
-            position: absolute;
-            top:10px;
-            right:330px;
-            background-color: #f70000;
-            padding: 10px;
-            border: 1px solid #000000;
-            border-radius: 50px;
-            box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the signup button */
-        .Book-button {
-            background-color: #007bff;
-            color: #000000;
-            border: none;
-            border-radius: 50px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .CancelTicket-box {
-            position: absolute;
-            top:10px;
-            right:190px;
-            background-color: #fa0000;
-            padding: 10px;
-            border: 1px solid #000000;
-            border-radius: 50px;
-            box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the signup button */
-        .CancelTicket-button {
-            background-color: #007bff;
-            color: #000000;
-            border: none;
-            border-radius: 50px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        
-        table {
-            border:1px solid black;
-            padding: 2px;
-         }
-        th {
-            background-color: black;
-            color: red;
-            padding: 20px;
-        }
-
-        tr {
-            background-color: rgb(0, 0, 0);
-            color: rgb(19, 240, 7);
-            padding: 20px;
-        }
-        td{
-            background-color: rgb(0, 0, 0);
-            color: rgb(19, 240, 7);
-            padding: 15px;
-        }
-
-        .marquee-container{
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .marquee {
-            animation: marquee-scroll 5s linear infinite;
-        }
-
-        @keyframes marquee-scroll {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-            25% {
-                transform: translateX(0);
-            }
-            75% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        audio {
-            width: 1840px; /* Adjust the width as needed */
-        }
     </style>
 </head>
 <title>IRBS.in</title>
 <link rel="stylesheet" href="style.css">
+
 <div class="topnav">
     <a class ="active" href="#home">Home</a>
     <a href="UTS.html">UTS</a>
@@ -149,11 +18,14 @@
 </div>
 
 <H2><marquee width ="100%" behavior="scroll"  class="welcome">Please help Indian Railways and government of India moving toward a digitalized and cashless economy. Eeadicate black money</marquee></H2>
-<body>
-         <div class="logo"><img src="railwaylogo.png" width="100" height="100"></div>
-         <div class="year"><img src="log-3.jpg" width="200" height="100"></div>
-         <div class="tiger"><img src="images.png" width="100" height="100"></div>
+<body>  <div class="midd-navbar">
+         <div class="logo"><img src="railwaylogo.png" width="100" height="100"/></div>
+         <div class="year"><img src="log-3.jpg" width="200" height="100"/></div>
+         <div class="tiger"><img src="images.png" width="100" height="100"/></div>
+         <div class="vote"><img src="voters.png" width="110" height="100"/></div>
+         <button id="playButton" class="">Play Announcement</button>
          <div class="ir"><font color="blue">Indian Railways</font></div>
+</div>
          <div class="nation">Life line to the nation....</div>
             <div class="timing">
                 <center>
@@ -338,14 +210,35 @@
       </tr>
     </center>
 </table>
-<div class="audio">
-    <audio controls>
-        <source src="thiruvarur anouncenment.mp3" type="audio/ogg">
+<div class="audio-container">
+   
+    <audio id="announcement">
+        <source src="thiruvarur anouncenment.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('announcement');
+        audio.play().then(() => {
+            console.log('Audio started playing');
+        }).catch(function(error) {
+            console.log('Autoplay was prevented. Error:', error);
+        });
+    });
+
+    window.addEventListener('beforeunload', function() {
+        console.log('Page unloading');
+        var audio = document.getElementById('announcement');
+        audio.pause();
+    });
+</script>
+<div class="footer-bottom text-center">
+    <center><p class="foot">&copy; 2024 Indian Railways. All Rights Reserved.</p></center>
 </div>
-
-
 </body>
+
+
 </html>
